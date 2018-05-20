@@ -1,0 +1,32 @@
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+{
+    "mainData" : {
+		"ijsbergen" : [
+			{"tijdstip":2000, "startY":0, "isMoving":false},
+			{"tijdstip":500, "startY":264, "isMoving":false},
+			{"tijdstip":900, "startY":66, "isMoving":false},
+			{"tijdstip":1000, "startY":462, "isMoving":false},
+			{"tijdstip":1400, "startY":66, "isMoving":false},
+			{"tijdstip":1100, "startY":396, "isMoving":false},
+			{"tijdstip":800, "startY":132, "isMoving":false},
+			{"tijdstip":700, "startY":462, "isMoving":false},
+			{"tijdstip":400, "startY":198, "isMoving":false},
+			{"tijdstip":700, "startY":264, "isMoving":false},
+			{"tijdstip":500, "startY":0, "isMoving":false},
+			{"tijdstip":800, "startY":198, "isMoving":false},
+			{"tijdstip":700, "startY":0, "isMoving":false},
+			{"tijdstip":400, "startY":132, "isMoving":false},
+			{"tijdstip":700, "startY":462, "isMoving":false},
+			{"tijdstip":500, "startY":66, "isMoving":false},
+			{"tijdstip":400, "startY":462, "isMoving":false},
+			{"tijdstip":700, "startY":264, "isMoving":false},
+			{"tijdstip":500, "startY":66, "isMoving":false},
+			{"tijdstip":800, "startY":198, "isMoving":false},
+            		{"tijdstip":900, "startY":462, "isMoving":false}
+		]
+	}
+}
