@@ -14,15 +14,25 @@ public class myComponent extends HComponent {
     
     Image schip;
     Image water;
-    public int sx=500, sy=250, ax=0;
+    Image lost;
+    Image victory;
+    Image playAgain;
+    public int sx=500, sy=250, ax=0, ly=-100, vy=-100, py=-100;
+    public boolean displayPlayAgain = false;
     
     public myComponent(int x, int y, int b, int h){
         this.setBounds(x,y,x+b,y+h);
         MediaTracker mt = new MediaTracker(this);
         schip=this.getToolkit().getImage("boot.png");
         water=this.getToolkit().getImage("water2.jpg");
+        lost=this.getToolkit().getImage("lost.png");
+        victory=this.getToolkit().getImage("victory.png");
+        playAgain=this.getToolkit().getImage("PlayAgain.png");
         mt.addImage(water, 0);
         mt.addImage(schip, 0);
+        mt.addImage(lost, 0);
+        mt.addImage(victory, 0);
+        mt.addImage(playAgain, 0);
         try {
             mt.waitForAll();
         } catch (InterruptedException ex) {
@@ -41,6 +51,9 @@ public class myComponent extends HComponent {
     g.drawImage(water, ax -1600, 0, this);
     g.drawImage(water, ax, 0, this);
     g.drawImage(schip, sx, sy, this);
+    g.drawImage(lost, 50, ly, this);
+    g.drawImage(victory, 100, vy, this);
+    g.drawImage(playAgain, 485, py, this);
 }
 }
 

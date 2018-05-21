@@ -15,33 +15,34 @@ public class HelloTVXlet implements Xlet, UserEventListener{
     
     myComponent mc;
     icebergComponent[] ic = new icebergComponent[21];
+    icebergTimerTask itt = new icebergTimerTask();
             
     public void startXlet() throws XletStateChangeException {
         HScene scene=HSceneFactory.getInstance().getDefaultHScene();
         
         icebergDataClass[] icebergData = new icebergDataClass[21];
     
-        icebergData[0]  = new icebergDataClass(3500,  264,   false);
-        icebergData[1]  = new icebergDataClass(2500,  264,   false);
-        icebergData[2]  = new icebergDataClass(3500,  66,    false);
+        icebergData[0]  = new icebergDataClass(3000,  66,   false);
+        icebergData[1]  = new icebergDataClass(2700,  264,   false);
+        icebergData[2]  = new icebergDataClass(3500,  264,    false);
         icebergData[3]  = new icebergDataClass(3500,  462,   false);
-        icebergData[4]  = new icebergDataClass(3500,  66,    false);
+        icebergData[4]  = new icebergDataClass(3500,  132,    false);
         icebergData[5]  = new icebergDataClass(3500,  396,   false);
-        icebergData[6]  = new icebergDataClass(3500,  132,   false);
+        icebergData[6]  = new icebergDataClass(3500,  66,   false);
         icebergData[7]  = new icebergDataClass(3500,  462,   false);
         icebergData[8]  = new icebergDataClass(2000,  198,   false);
         icebergData[9]  = new icebergDataClass(3500,  264,   false);
         icebergData[10] = new icebergDataClass(2500,  396,   false);
         icebergData[11] = new icebergDataClass(3500,  198,   false);
-        icebergData[12] = new icebergDataClass(3500,  0,     false);
+        icebergData[12] = new icebergDataClass(3600,  264,     false);
         icebergData[13] = new icebergDataClass(2000,  66,    false);
         icebergData[14] = new icebergDataClass(3500,  462,   false);
         icebergData[15] = new icebergDataClass(2500,  198,   false);
         icebergData[16] = new icebergDataClass(2000,  462,   false);
-        icebergData[17] = new icebergDataClass(3500,  264,   false);
+        icebergData[17] = new icebergDataClass(3500,  198,   false);
         icebergData[18] = new icebergDataClass(2500,  396,   false);
-        icebergData[19] = new icebergDataClass(3500,  198,   false);
-        icebergData[20] = new icebergDataClass(3500,  462,   false);
+        icebergData[19] = new icebergDataClass(3500,  66,   false);
+        icebergData[20] = new icebergDataClass(3500,  396,   false);
         
         
         mc = new myComponent(0,0,720,576);
@@ -60,12 +61,13 @@ public class HelloTVXlet implements Xlet, UserEventListener{
         
         UserEventRepository repo = new UserEventRepository("naam");
         repo.addAllArrowKeys();
+        repo.addKey(HRcEvent.VK_ENTER);
+        repo.addKey(HRcEvent.VK_ACCEPT);
         
         EventManager manager = EventManager.getInstance();
         manager.addUserEventListener(this, repo);
         
         myTimerTask mtt = new myTimerTask();
-        icebergTimerTask itt = new icebergTimerTask();
         mtt.mc=mc;
         itt.mc=mc;
         itt.ic=ic;
@@ -89,7 +91,7 @@ public class HelloTVXlet implements Xlet, UserEventListener{
     }
 
     public void userEventReceived(UserEvent e) {
-        System.out.println(e.getCode());
+        //System.out.println(e.getCode());
         //System.out.println("boat y pos: " + mc.sy);
         if(e.getType()==HRcEvent.KEY_PRESSED){
             if(e.getCode()==HRcEvent.VK_UP){
@@ -108,6 +110,10 @@ public class HelloTVXlet implements Xlet, UserEventListener{
                     //System.out.println("lol " + mc.sy);
                 }
                 mc.repaint();
+            }
+            if((e.getCode()==HRcEvent.VK_ACCEPT || e.getCode()==HRcEvent.VK_ENTER) && mc.displayPlayAgain == true)
+            {
+                itt.resetGame();
             }
         }
     }

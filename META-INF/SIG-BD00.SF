@@ -1,13 +1,13 @@
 Signature-Version: 1.0
 Created-By: 1.6.0_16 (Sun Microsystems Inc.)
 BDJ-Signature-Version: 1.0
-SHA1-Digest-Manifest: rlZtMXAlip66VHOFd1oswQ7fm/c=
+SHA1-Digest-Manifest: c6A0HhnTq3AF7HxFmI5vHbc3HS0=
 
 Name: hellotvxlet/HelloTVXlet.class
-SHA1-Digest: 7OZTKMTxRx9ZHErsB57w6GES+00=
+SHA1-Digest: 8/QlEilWv2qd5xYFlDLJoUsUnxw=
 
 Name: hellotvxlet/myComponent.class
-SHA1-Digest: yNmH2TPTV0FyyaH7iu2FGupI8JI=
+SHA1-Digest: T5DRcas2F1bIoDbRvsAMjVSRRtc=
 
 Name: hellotvxlet/icebergComponent.class
 SHA1-Digest: UFsmLAAmO9BPEcjysOLns6dhO5E=
@@ -22,5 +22,5 @@ Name: hellotvxlet/myTimerTask.class
 SHA1-Digest: VkovBqlMTx5KGlnK0J8KyE9DKSI=
 
 Name: hellotvxlet/icebergTimerTask.class
-SHA1-Digest: Nnj5oNhT01X/2v+I05TKspXSE+8=
+SHA1-Digest: tyOmukw6x5zzW3o6U92ttVc+fZk=
 
